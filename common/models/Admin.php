@@ -42,6 +42,7 @@ class Admin extends ActiveRecord
 
     public function validatePass()
     {
+        //1.验证规则  2.校验用户名和密码是否在数据库中存在
         if (!$this->hasErrors()) {
             $data = self::find()->where('adminuser = :user and adminpass = :pass', [":user" => $this->adminuser, ":pass" => md5($this->adminpass)])->one();
             if (is_null($data)) {
@@ -63,15 +64,17 @@ class Admin extends ActiveRecord
     public function login($data)
     {
         $this->scenario = "login";
+        //1.载入数据 2.校验规则
         if ($this->load($data) && $this->validate()) {
-            //做点有意义的事
+            //做点有意义的事  将用户信息存入session
             $lifetime = $this->rememberMe ? 24*3600 : 0;
             $session = Yii::$app->session;
             session_set_cookie_params($lifetime);
             $session['admin'] = [
                 'adminuser' => $this->adminuser,
-                'isLogin' => 1,
+                'isLogin' => 1,  //是否登录
             ];
+            //更新操作
             $this->updateAll(['logintime' => time(), 'loginip' => ip2long(Yii::$app->request->userIP)], 'adminuser = :user', [':user' => $this->adminuser]);
             return (bool)$session['admin']['isLogin'];
         }
