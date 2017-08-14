@@ -28,6 +28,7 @@ class Admin extends ActiveRecord
         return [
             ['adminuser', 'required', 'message' => '管理员账号不能为空', 'on' => ['login', 'seekpass', 'changepass', 'adminadd', 'changeemail']],
             ['adminpass', 'required', 'message' => '管理员密码不能为空', 'on' => ['login', 'changepass', 'adminadd', 'changeemail']],
+            ['adminpass','string','min'=>6,'on'=>'signup'],
             ['rememberMe', 'boolean', 'on' => 'login'],
             ['adminpass', 'validatePass', 'on' => ['login', 'changeemail']],
             ['adminemail', 'required', 'message' => '电子邮箱不能为空', 'on' => ['seekpass', 'adminadd', 'changeemail']],
@@ -89,9 +90,9 @@ class Admin extends ActiveRecord
             $time = time();
             $token = $this->createToken($data['Admin']['adminuser'], $time);
             $mailer = Yii::$app->mailer->compose('seekpass', ['adminuser' => $data['Admin']['adminuser'], 'time' => $time, 'token' => $token]);
-            $mailer->setFrom("imooc_shop@163.com");
+            //$mailer->setFrom("1009833975@qq.com");
             $mailer->setTo($data['Admin']['adminemail']);
-            $mailer->setSubject("慕课商城-找回密码");
+            $mailer->setSubject("欢乐豆商城-找回密码");
             if ($mailer->send()) {
                 return true;
             }

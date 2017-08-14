@@ -36,4 +36,17 @@ class PublicController extends \yii\web\Controller
         $this->goBack();
     }
 
+    public function actionSeekpassword()
+    {
+        $this->layout=false;
+        $model=new Admin();
+        if(Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            if ($model->seekPass($data)) {
+                Yii::$app->session->setFlash('info', '电子邮件已经发送成功，请查收');
+            }
+        }
+        return $this->render('seekpassword',['model'=>$model]);
+    }
+
 }

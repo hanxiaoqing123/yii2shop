@@ -5,7 +5,7 @@ use yii\helpers\Html;
 <!DOCTYPE html>
 <html class="login-bg">
 <head>
-    <title>欢乐豆商城 - 后台管理</title>
+    <title>欢乐豆商城 - 找回密码</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -44,15 +44,11 @@ use yii\helpers\Html;
     ]); ?>
     <div class="span4 box">
         <div class="content-wrap">
-            <h6>欢乐豆商城 - 后台管理</h6>
+            <h6>欢乐豆商城 - 找回密码</h6>
             <?php echo $form->field($model, 'adminuser')->textInput(["class" => "span12", "placeholder" => "管理员账号"]); ?>
-            <?php echo $form->field($model, 'adminpass')->passwordInput(["class" => "span12", "placeholder" => "管理员密码"]); ?>
-            <a href="<?php echo yii\helpers\Url::to(['public/seekpassword']); ?>" class="forgot">忘记密码?</a>
-            <?php echo $form->field($model, 'rememberMe')->checkbox([
-                'id' => 'remember-me',
-                'template' => '<div class="remember">{input}<label for="remember-me">记住我</label></div>',
-            ]); ?>
-            <?php echo Html::submitButton('登录', ["class" => "btn-glow primary login"]); ?>
+            <?php echo $form->field($model, 'adminemail')->textInput(["class" => "span12", "placeholder" => "管理员邮箱"]); ?>
+            <a href="<?php echo yii\helpers\Url::to(['public/login']); ?>" class="forgot">返回登录</a>
+            <?php echo Html::submitButton('找回密码', ["class" => "btn-glow primary login"]); ?>
         </div>
     </div>
     <?php ActiveForm::end(); ?>
