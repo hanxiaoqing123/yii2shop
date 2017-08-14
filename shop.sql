@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `shop_admin`(
     UNIQUE shop_admin_adminuser_adminemail(`adminuser`, `adminemail`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `shop_admin`(adminuser,adminpass,adminemail,createtime) VALUES('admin', md5('123'), 'shop@imooc.com', UNIX_TIMESTAMP());
+INSERT INTO `shop_admin`(adminuser,adminpass,adminemail,createtime) VALUES('admin', md5('1234567'), 'shop@imooc.com', UNIX_TIMESTAMP());
 
 DROP TABLE IF EXISTS `shop_user`;
 CREATE TABLE IF NOT EXISTS `shop_user`(

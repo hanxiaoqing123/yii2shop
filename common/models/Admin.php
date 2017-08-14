@@ -28,7 +28,7 @@ class Admin extends ActiveRecord
         return [
             ['adminuser', 'required', 'message' => '管理员账号不能为空', 'on' => ['login', 'seekpass', 'changepass', 'adminadd', 'changeemail']],
             ['adminpass', 'required', 'message' => '管理员密码不能为空', 'on' => ['login', 'changepass', 'adminadd', 'changeemail']],
-            ['adminpass','string','min'=>6,'on'=>'signup'],
+            ['adminpass','string','min'=>6,'message'=>'管理员密码不能少于6位','on'=>'changepass'],
             ['rememberMe', 'boolean', 'on' => 'login'],
             ['adminpass', 'validatePass', 'on' => ['login', 'changeemail']],
             ['adminemail', 'required', 'message' => '电子邮箱不能为空', 'on' => ['seekpass', 'adminadd', 'changeemail']],
