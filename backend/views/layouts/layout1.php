@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="<?php echo yii\helpers\Url::to(['/index/index']) ?>" style="font-weight:700;font-family:Microsoft Yahei">慕课商城 - 后台管理</a>
+        <a class="brand" href="<?php echo yii\helpers\Url::to(['/index/index']) ?>" style="font-weight:700;font-family:Microsoft Yahei">欢乐豆商城 - 后台管理</a>
 
         <ul class="nav pull-right">
             <li class="hidden-phone">

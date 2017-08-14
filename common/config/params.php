@@ -4,6 +4,6 @@ return [
     'supportEmail' => 'support@example.com',
     'user.passwordResetTokenExpire' => 3600,
     'pageSize'=>[
-        'manage'=>1,
+        'manage'=>3,
     ]
 ];
