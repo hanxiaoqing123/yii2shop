@@ -54,7 +54,9 @@ class ManageController extends \yii\web\Controller
             $this->redirect(['manage/managers']);
         }
     }
-
+    /*
+     * 添加管理员用户
+     * */ 
     public function actionReg()
     {
         $this->layout='layout1';
@@ -70,5 +72,35 @@ class ManageController extends \yii\web\Controller
         $model->adminpass='';
         $model->repass='';
         return $this->render('reg',['model'=>$model]);
+    }
+
+    public function actionChangeemail()
+    {
+        $this->layout='layout1';
+        $model=Admin::find()->where('adminuser=:user',[':user'=>Yii::$app->session['admin']['adminuser']])->one();
+        if(Yii::$app->request->isPost){
+            $data=Yii::$app->request->post();
+            if($model->changeEmail($data)){
+                Yii::$app->session->setFlash('info', '修改成功');
+            }
+        }
+        $model->adminpass="";
+        return $this->render('changeemail',['model'=>$model]);
+
+    }
+
+    public function actionChangepass()
+    {
+        $this->layout='layout1';
+        $model=Admin::find()->where('adminuser=:user',[':user'=>Yii::$app->session['admin']['adminuser']])->one();
+        if(Yii::$app->request->isPost){
+            $data=Yii::$app->request->post();
+            if($model->changePass($data)){
+                Yii::$app->session->setFlash('info', '修改成功');
+            }
+        }
+        $model->adminpass="";
+        $model->repass="";
+        return $this->render('changepass',['model'=>$model]);
     }
 }
