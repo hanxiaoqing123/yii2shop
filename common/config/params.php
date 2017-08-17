@@ -12,6 +12,6 @@ return [
     ],
 
     'defaultValue' => [
-       'avatar' => '@backend/web/shopassets/admin/img/contact-img.png',
+       'avatar' => 'shopassets/admin/img/contact-img.png',
 ],
 ];
