@@ -13,5 +13,5 @@ return [
 
     'defaultValue' => [
        'avatar' => 'shopassets/admin/img/contact-img.png',
-],
+    ],
 ];

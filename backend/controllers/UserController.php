@@ -37,26 +37,34 @@ class UserController extends Controller
 
     public function actionDel()
     {
+       //保持一致性：先删除profile表再删除user表，其中采用事务处理
         try{
-            $userid = (int)Yii::$app->request->get('userid');
-            if (empty($userid)) {
+            $userid=(int)Yii::$app->request->get("userid");
+            if(!$userid){
                 throw new \Exception();
             }
-            $trans = Yii::$app->db->beginTransaction();
-            if ($obj = Profile::find()->where('userid = :id', [':id' => $userid])->one()) {
-                $res = Profile::deleteAll('userid = :id', [':id' => $userid]);
-                if (empty($res)) {
+            //开启事务
+            $trans=Yii::$app->db->beginTransaction();
+            //删除profile表
+            $pObj=Profile::findOne(['userid'=>$userid]);
+            if($pObj){
+                $res=Profile::deleteAll(['userid'=>$userid]);
+                if(!$res){
                     throw new \Exception();
                 }
             }
-            if (!User::deleteAll('userid = :id', [':id' => $userid])) {
+            //删除user表
+            $res1=User::deleteAll(['userid'=>$userid]);
+            if(!$res1){
                 throw new \Exception();
             }
+
+            //提交
             $trans->commit();
-        } catch(\Exception $e) {
-            if (Yii::$app->db->getTransaction()) {
-                $trans->rollback();
-            }
+        }catch (\Exception $e){
+           if(Yii::$app->db->getTransaction()){
+               $trans->rollBack();
+           }
         }
         $this->redirect(['user/users']);
     }

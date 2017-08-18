@@ -45,7 +45,7 @@ class Category extends ActiveRecord
         $cates = ArrayHelper::toArray($cates);
         return $cates;
     }
-
+    //查询所有分类 并且显示级别
     public function getTree($cates, $pid = 0)
     {
         $tree = [];
@@ -57,7 +57,7 @@ class Category extends ActiveRecord
         }
         return $tree;
     }
-
+    //把每个级别对应的前缀存到数组里面
     public function setPrefix($data, $p = "|-----")
     {
         $tree = [];
