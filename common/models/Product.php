@@ -6,10 +6,10 @@ use yii\db\ActiveRecord;
 
 class Product extends ActiveRecord
 {
-    const AK = 'toix9okVaTB0uz6oxPe_vTnW-psg62jGuQOb01uZ';
-    const SK = '9BbqEK8nmW-LlLWnmt4Aqe3CWWKN-IiSJMDlY0a3';
-    const DOMAIN = 'o7zgluxwg.bkt.clouddn.com';
-    const BUCKET = 'imooc-shop';
+    const AK = 'LJesgZNJLNeGvA2kXNreZatZbUvAGYcw7X_xQCyG';
+    const SK = 'RyR3TVs4NO2EElRsjK6KG4VJIrxiWB0jGQuaSbj1';
+    const DOMAIN = 'ov2fi7uzp.bkt.clouddn.com';
+    const BUCKET = 'yii2shop';
 
     public $cate;
 
@@ -52,6 +52,7 @@ class Product extends ActiveRecord
 
     public function add($data)
     {
+        $this->createtime=time();
         if ($this->load($data) && $this->save()) {
             return true;
         }
