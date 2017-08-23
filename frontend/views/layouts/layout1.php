@@ -10,7 +10,7 @@
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
 
-    <title>慕课商城</title>
+    <title>欢乐豆商城</title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/shopassets/css/bootstrap.min.css">
 
@@ -143,7 +143,7 @@
                                             <div class="row">
                                                 <div class="col-xs-4 col-sm-4 no-margin text-center">
                                                     <div class="thumb">
-                                                        <img alt="" src="<?php echo $product['cover'] ?>-picsmall" />
+                                                        <img alt="" src="http://<?php echo $product['cover'] ?>-picsmall" />
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-8 col-sm-8 no-margin">
@@ -200,7 +200,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>
@@ -260,7 +260,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>

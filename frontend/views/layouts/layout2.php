@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="robots" content="all">
 
-    <title>商品分类 - 慕课商城</title>
+    <title>商品分类 - 欢乐豆商城</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/shopassets/css/bootstrap.min.css">
@@ -245,7 +245,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="http://<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="http://<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>
@@ -305,7 +305,7 @@
 
                                             <div class="col-xs-12 col-sm-3 no-margin">
                                                 <a href="<?php echo yii\helpers\Url::to(['product/detail', 'productid' => $pro->productid]) ?>" class="thumb-holder">
-                                                    <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-picsmall" data-echo="<?php echo $pro->cover ?>-picsmall" />
+                                                    <img alt="<?php echo $pro->title ?>" src="http://<?php echo $pro->cover ?>-picsmall" data-echo="http://<?php echo $pro->cover ?>-picsmall" />
                                                 </a>
                                             </div>
                                         </div>
@@ -342,8 +342,8 @@
                         <p class="regular-bold"> 请通过电话，电子邮件随时联系我们</p>
 
                         <p>
-                            西城区二环到三环德胜门外大街10号TCL大厦3层(马甸桥南), 北京市西城区, 中国
-                            <br>慕课网 (QQ群:416465236)
+                            成都市高新区，中国
+                            <br>欢乐豆 (QQ:1695722217)
                         </p>
 
                         <!--<div class="social-icons">

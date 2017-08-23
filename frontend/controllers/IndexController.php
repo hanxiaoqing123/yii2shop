@@ -4,7 +4,7 @@ namespace frontend\controllers;
 
 use common\models\Product;
 
-class IndexController extends \yii\web\Controller
+class IndexController extends CommonController
 {
     public function actionIndex()
     {

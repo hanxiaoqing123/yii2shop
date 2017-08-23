@@ -9,15 +9,15 @@ use yii\bootstrap\ActiveForm;
 
                 <div id="owl-single-product">
                     <div class="single-product-gallery-item" id="slide1">
-                        <a data-rel="prettyphoto" href="<?php echo $product['cover'] ?>-coverbig">
-                            <img class="img-responsive" alt="" src="<?php echo $product['cover'] ?>-coverbig"  />
+                        <a data-rel="prettyphoto" href="http://<?php echo $product['cover'] ?>-coverbig">
+                            <img class="img-responsive" alt="" src="http://<?php echo $product['cover'] ?>-coverbig"  />
                         </a>
                     </div><!-- /.single-product-gallery-item -->
                     <?php $i = 2 ?>
                     <?php foreach((array)json_decode($product['pics'], true) as $k=>$pic): ?>
                         <div class="single-product-gallery-item" id="slide<?php echo $i ?>">
                             <a data-rel="prettyphoto" href="<?php echo $pic ?>-coverbig">
-                                <img class="img-responsive" alt="" src="<?php echo $pic ?>-coverbig" />
+                                <img class="img-responsive" alt="" src="http://<?php echo $pic ?>-coverbig" />
                             </a>
                         </div><!-- /.single-product-gallery-item -->
                         <?php $i++ ?>
@@ -31,7 +31,7 @@ use yii\bootstrap\ActiveForm;
                         <?php $i = 2 ?>
                         <?php foreach((array)json_decode($product['pics'], true) as $k=>$pic): ?>
                             <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="<?php echo $i-1 ?>" href="#slide<?php echo $i ?>">
-                                <img width="67" alt="" src="<?php echo $pic ?>-piclistsmall"/>
+                                <img width="67" alt="" src="http://<?php echo $pic ?>-piclistsmall"/>
                             </a>
                             <?php $i++; ?>
                         <?php endforeach; ?>
@@ -133,7 +133,7 @@ use yii\bootstrap\ActiveForm;
                             <?php endif; ?>
 
                             <div class="image">
-                                <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-covermiddle" data-echo="<?php echo $pro->cover ?>-covermiddle" />
+                                <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-covermiddle" data-echo="http://<?php echo $pro->cover ?>-covermiddle" />
                             </div>
                             <div class="body">
                                 <div class="title">

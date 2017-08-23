@@ -24,7 +24,7 @@
                                                 </ul>
                                             </div>
                                             <div class="dropdown-banner-holder">
-                                                <a href="#"><img alt="" src="/assets/images/banners/banner-side.png" /></a>
+                                                <a href="#"><img alt="" src="/shopassets/images/banners/banner-side.png" /></a>
                                             </div>
                                         </div>
                                         <!-- ================================== MEGAMENU VERTICAL ================================== -->
@@ -34,7 +34,7 @@
                             <?php
                         endforeach;
                         ?>
-                        <!--<li><a href="http://themeforest.net/item/media-center-electronic-ecommerce-html-template/8178892?ref=shaikrilwan">Buy this Theme</a></li>-->
+                        <!--<li><a href="themeforest.net/item/media-center-electronic-ecommerce-html-template/8178892?ref=shaikrilwan">Buy this Theme</a></li>-->
                     </ul><!-- /.nav -->
                 </nav><!-- /.megamenu-horizontal -->
             </div><!-- /.side-menu -->
@@ -46,7 +46,7 @@
             <div id="hero">
                 <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 
-                    <div class="item" style="background-image: url(/assets/images/sliders/slider01.jpg);">
+                    <div class="item" style="background-image: url(/shopassets/images/sliders/slider01.jpg);">
                         <div class="container-fluid">
                             <div class="caption vertical-center text-left">
                                 <div class="big-text fadeInDown-1">
@@ -68,7 +68,7 @@
                         </div><!-- /.container-fluid -->
                     </div><!-- /.item -->
 
-                    <!--<div class="item" style="background-image: url(/assets/images/sliders/slider02.jpg);">
+                    <!--<div class="item" style="background-image: url(/shopassets/images/sliders/slider02.jpg);">
                         <div class="container-fluid">
                             <div class="caption vertical-center text-left">
                                 <div class="big-text fadeInDown-1">
@@ -106,7 +106,7 @@
                     <h1 style="font-family:'Microsoft Yahei';">尝尝鲜</h1>
                     <span class="tagline">查看最新分类</span>
                 </div>
-                <img class="banner-image" alt="" src="/assets/images/blank.gif" data-echo="/assets/images/banners/banner-narrow-01.jpg" />
+                <img class="banner-image" alt="" src="/shopassets/images/blank.gif" data-echo="/shopassets/images/banners/banner-narrow-01.jpg" />
             </a>
         </div>
         <div class="col-xs-12 col-lg-6 no-margin text-right banner">
@@ -115,7 +115,7 @@
                     <h1 style="font-family:'Microsoft Yahei';">时尚流行</h1>
                     <span class="tagline">查看最新上架</span>
                 </div>
-                <img class="banner-image" alt="" src="/assets/images/blank.gif" data-echo="/assets/images/banners/banner-narrow-02.jpg" />
+                <img class="banner-image" alt="" src="/shopassets/images/blank.gif" data-echo="/shopassets/images/banners/banner-narrow-02.jpg" />
             </a>
         </div>
     </div><!-- /.container -->
@@ -146,7 +146,7 @@
                                     <?php endif; ?>
 
                                     <div class="image">
-                                        <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-covermiddle" data-echo="<?php echo $pro->cover ?>-covermiddle" />
+                                        <img alt="<?php echo $pro->title ?>" src="http://<?php echo $pro->cover ?>-covermiddle" data-echo="http://<?php echo $pro->cover ?>-covermiddle" />
                                     </div>
                                     <div class="body">
                                         <div class="title">
@@ -276,7 +276,7 @@
                         <div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
                             <div class="product-item">
                                 <div class="image">
-                                    <img alt="<?php echo $data['all'][$i]->title ?>" src="<?php echo $data['all'][$i]->cover ?>-covermiddle" data-echo="<?php echo $data['all'][$i]->cover ?>-covermiddle" />
+                                    <img alt="<?php echo $data['all'][$i]->title ?>" src="<?php echo $data['all'][$i]->cover ?>-covermiddle" data-echo="http://<?php echo $data['all'][$i]->cover ?>-covermiddle" />
                                 </div>
                                 <div class="body">
                                     <div class="label-discount clear"></div>
@@ -330,13 +330,13 @@
                     <div id="best-seller-single-product-slider" class="single-product-slider owl-carousel">
                         <div class="single-product-gallery-item" id="slide1">
                             <a data-rel="prettyphoto" href="<?php echo $last->cover ?>">
-                                <img alt="<?php echo $last->title ?>" src="<?php echo $last->cover ?>-coverbig" data-echo="<?php echo $last->cover ?>-coverbig" />
+                                <img alt="<?php echo $last->title ?>" src="<?php echo $last->cover ?>-coverbig" data-echo="http://<?php echo $last->cover ?>-coverbig" />
                             </a>
                         </div><!-- /.single-product-gallery-item -->
                         <?php foreach((array)json_decode($last->pics, true) as $key => $pic): ?>
                             <div class="single-product-gallery-item" id="slide<?php echo $key+2; ?>">
                                 <a data-rel="prettyphoto" href="<?php echo $last->pics ?>">
-                                    <img alt="" src="<?php echo $pic ?>-picbig" data-echo="<?php echo $pic ?>-picbig" />
+                                    <img alt="" src="<?php echo $pic ?>-picbig" data-echo="http://<?php echo $pic ?>-picbig" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->
                         <?php endforeach; ?>
@@ -344,9 +344,9 @@
 
                     <div class="gallery-thumbs clearfix">
                         <ul>
-                            <li><a class="horizontal-thumb active" data-target="#best-seller-single-product-slider" data-slide="0" href="#slide1"><img alt="<?php echo $last->title ?>" src="<?php echo $last->cover ?>-picsmall" data-echo="<?php echo $last->cover ?>-picsmall" /></a></li>
+                            <li><a class="horizontal-thumb active" data-target="#best-seller-single-product-slider" data-slide="0" href="#slide1"><img alt="<?php echo $last->title ?>" src="<?php echo $last->cover ?>-picsmall" data-echo="http://<?php echo $last->cover ?>-picsmall" /></a></li>
                             <?php foreach ((array)json_decode($last->pics, true) as $key => $pic): ?>
-                                <li><a class="horizontal-thumb" data-target="#best-seller-single-product-slider" data-slide="<?php echo $key+1; ?>" href="#slide<?php echo $key+2; ?>"><img alt="" src="<?php echo $pic ?>-picsmall" data-echo="<?php echo $pic ?>-picsmall" /></a></li>
+                                <li><a class="horizontal-thumb" data-target="#best-seller-single-product-slider" data-slide="<?php echo $key+1; ?>" href="#slide<?php echo $key+2; ?>"><img alt="" src="<?php echo $pic ?>-picsmall" data-echo="http://<?php echo $pic ?>-picsmall" /></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div><!-- /.gallery-thumbs -->
@@ -393,7 +393,7 @@
                             <?php endif; ?>
 
                             <div class="image">
-                                <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-covermiddle" data-echo="<?php echo $pro->cover ?>-covermiddle" />
+                                <img alt="<?php echo $pro->title ?>" src="<?php echo $pro->cover ?>-covermiddle" data-echo="http://<?php echo $pro->cover ?>-covermiddle" />
                             </div>
                             <div class="body">
                                 <div class="title">
@@ -434,49 +434,49 @@
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-01.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-01.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-02.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-02.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-03.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-03.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-04.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-04.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-01.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-01.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-02.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-02.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-03.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-03.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 
                 <div class="carousel-item">
                     <a href="#">
-                        <img alt="" src="/assets/images/brands/brand-04.jpg" />
+                        <img alt="" src="/shopassets/images/brands/brand-04.jpg" />
                     </a>
                 </div><!-- /.carousel-item -->
 

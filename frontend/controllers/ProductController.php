@@ -5,7 +5,7 @@ use Yii;
 use yii\data\Pagination;
 use common\models\Product;
 
-class ProductController extends \yii\web\Controller
+class ProductController extends CommonController
 {
     public function actionIndex()
     {
