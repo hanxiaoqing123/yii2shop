@@ -11,9 +11,9 @@
 				<section class="section sign-in inner-right-xs">
                     <h2 class="bordered">
                         <img src="<?php echo Yii::$app->session['userinfo']['figureurl_1'] ?>">
-                        å®Œå–„æ‚¨çš„ä¿¡æ¯
+                        ÍêÉÆÄúµÄÐÅÏ¢
                     </h2>
-					<p>è¯·å¡«å†™ä¸€ä¸ªç”¨æˆ·åå’Œå¯†ç </p>
+					<p>ÇëÌîÐ´Ò»¸öÓÃ»§ÃûºÍÃÜÂë</p>
 
 					<div class="social-auth-buttons">
 					</div>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="buttons-holder">
-                            <?php echo Html::submitButton('å®Œå–„ä¿¡æ¯', ['class' => 'le-button huge']); ?>
+                            <?php echo Html::submitButton('ÍêÉÆÐÅÏ¢', ['class' => 'le-button huge']); ?>
                         </div><!-- /.buttons-holder -->
 
                     <?php ActiveForm::end(); ?><!-- /.cf-style-1 -->

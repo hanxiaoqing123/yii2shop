@@ -41,7 +41,7 @@ class MemberController extends CommonController
         if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
             if ($model->regByMail($post)) {
-                Yii::$app->session->setFlash('info', 'ç”µå­é‚®ä»¶å‘é€æˆåŠŸ');
+                Yii::$app->session->setFlash('info', 'µç×ÓÓÊ¼þ·¢ËÍ³É¹¦');
             }
         }
         $this->layout = 'layout2';
