@@ -398,6 +398,42 @@
     $("#createlink").click(function(){
         $(".billing-address").slideDown();
     });
+    $(".editAddress").click(function(){
+        $(".billing-address1").slideDown();
+        var firstname=$(this).nextAll().eq(0).val();
+        $("#firstname").val(firstname);
+
+        var lastname=$(this).nextAll().eq(1).val();
+        $("#lastname").val(lastname);
+
+        var company=$(this).nextAll().eq(2).val();
+        $("#company").val(company);
+
+        var address=$(this).nextAll().eq(3).val();
+        var index="";
+        if(address.indexOf("区")){
+            index=address.indexOf("区")
+        }else{
+            index=address.indexOf("县")
+        }
+        var address1=address.substring(0,index+1);
+        var address2=address.substr(index+1);
+        $("#address1").val(address1);
+        $("#address2").val(address2);
+
+        var postcode=$(this).nextAll().eq(4).val();
+        $("#postcode").val(postcode);
+
+        var email=$(this).nextAll().eq(5).val();
+        $("#email").val(email);
+
+
+        var telephone=$(this).nextAll().eq(6).val();
+        $("#telephone").val(telephone);
+
+        var addid=$(this).nextAll().eq(7).val();
+        $("#addid").val(addid);
+    });
     $(".minus").click(function(){
         var cartid = $("input[name=productnum]").attr('id');
         var num = parseInt($("input[name=productnum]").val()) - 1;
